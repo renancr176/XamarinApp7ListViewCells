@@ -1,14 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinApp7ListViewCells"
+             xmlns:pages="clr-namespace:XamarinApp7ListViewCells.Pages"
              x:Class="XamarinApp7ListViewCells.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
-</ContentPage>
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" 
+                     BackgroundColor="#0D1F2D">
+            <StackLayout>
+                <StackLayout BackgroundColor="#FFC926"
+                             Padding="5,10,5,10"
+                             Margin="0,0,0,10">
+                    <Image Source="xamarin_logo.png" 
+                           WidthRequest="100"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"></Image>
+                </StackLayout>
+                <ScrollView Orientation="Both">
+                    <StackLayout>
+                        <Button Text="Home"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToHome"></Button>
+                        <Button Text="Text Cell"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToTextCell"></Button>
+                        <Button Text="Image Cell"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToImageCell"></Button>
+                        <Button Text="Entry Cell"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToEntyCell"></Button>
+                        <Button Text="Switch Cell"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GotToSwitchCell"></Button>
+                        <Button Text="View Cell"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToViewCell"></Button>
+                        <Button Text="List View"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToListView"></Button>
+                        <Button Text="List View Button"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToListViewButton"></Button>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <pages:Home></pages:Home>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

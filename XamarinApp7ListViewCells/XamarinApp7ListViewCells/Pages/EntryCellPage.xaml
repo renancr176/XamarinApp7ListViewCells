@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp7ListViewCells.Pages.EntryCellPage"
+             Title="Entry Cell">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     Padding="10">
+            <TableView>
+                <TableRoot>
+                    <TableSection Title="Entry cell (label + inputText)">
+                        <EntryCell Label="Nome"
+                                   LabelColor="#0D1F2D"
+                                   Placeholder="Nome completo"></EntryCell>
+                        <EntryCell Label="Cargo"
+                                   LabelColor="#0D1F2D"></EntryCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

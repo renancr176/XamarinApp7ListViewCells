@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp7ListViewCells.Pages.ViewCellPage"
+             Title="View Cell">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     Padding="10">
+            <ListView x:Name="ListViewFuncionarios"
+                      VerticalOptions="FillAndExpand"
+                      HasUnevenRows="True">
+                <ListView.Header>
+                    <Label Text="List view + view cell"></Label>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10"
+                                         Orientation="Horizontal">
+                                <Label Text="{Binding Cargo}"
+                                       TextColor="#FFC926"
+                                       Margin="0, 0, 10, 0"></Label>
+                                <Label Text="{Binding Nome}"
+                                       FontAttributes="Bold"
+                                       TextColor="#0D1F2D"></Label>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <TableView VerticalOptions="FillAndExpand">
+                <TableRoot>
+                    <TableSection Title="Table view + view cell">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Comentario"></Label>
+                                <Editor HorizontalOptions="FillAndExpand"
+                                        HeightRequest="100"></Editor>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

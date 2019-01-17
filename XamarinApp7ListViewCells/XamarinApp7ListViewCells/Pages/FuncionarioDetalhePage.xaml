@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp7ListViewCells.Pages.FuncionarioDetalhePage"
+             Title="Detalhe">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Spacing="0">
+                <RelativeLayout VerticalOptions="Start"
+                            HeightRequest="165">
+                    <Image x:Name="ImageAvatar"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-64}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0}"></Image>
+                    <Label x:Name="LabelNome"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Large"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=ImageAvatar, Property=Y, Factor=1, Constant=115}"></Label>
+                </RelativeLayout>
+                <StackLayout BackgroundColor="#0d1f2d"
+                  HeightRequest="80">
+                    <Label x:Name="LabelCargo"
+                           TextColor="#FFC926"
+                           HorizontalTextAlignment="Center"
+                           VerticalOptions="CenterAndExpand"
+                           FontSize="Large"
+                           FontAttributes="Bold"></Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
